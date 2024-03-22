@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Listar Músicas</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <img
+            src="assets/images/love-song-icon.jpg"
+            alt="Logo do Sistema"
+            height="70px"
+          />
+        </a>
+        <div class="navbar-nav">
+          <a class="nav-link" href="upload.html">Cadastrar Música</a>
+          <a class="nav-link active" aria-current="page" href="list.html"
+            >Listar Músicas</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mt-4">
+      <h2>Músicas Enviadas</h2>
+      <div class="input-group mb-3">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Buscar por nome, artista ou estilo"
+          id="searchTerm"
+        />
+        <button
+          class="btn btn-outline-secondary"
+          type="button"
+          id="button-search"
+          onclick="searchMusic()"
+        >
+          Buscar
+        </button>
+      </div>
+      <div id="musicList" class="list-group"></div>
+    </div>
+
+    <script src="list.js"></script>
+  </body>
+</html>
